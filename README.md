@@ -4,11 +4,7 @@
 
 ##  ABSTRACT  
 
-The Movie Analytics Platform is an end-to-end data engineering and analytics solution designed to process and analyze large-scale movie datasets across Box Office and OTT platforms.  
-
-This platform integrates multiple data sources and transforms raw, unstructured data into structured, analytics-ready datasets using a modern cloud-based architecture.  
-
-By leveraging Snowflake, PySpark, Apache Airflow, and Streamlit, the system enables efficient data processing, automated workflows, and interactive business intelligence dashboards for data-driven decision-making.
+The Movie Analytics Platform is an end-to-end data engineering and analytics solution designed to analyze Box Office and OTT performance using data from multiple sources such as TMDB, IMDB, OTT platforms, and Box Office datasets. The system utilizes technologies like Snowflake, PySpark, Apache Airflow, and Streamlit to ingest, process, and transform raw data into structured, analytics-ready formats. By implementing a layered architecture, the platform enables efficient data processing and supports the generation of insights related to revenue trends, genre performance, and OTT distribution. The final output is presented through an interactive dashboard, allowing users to explore and analyze key business metrics effectively
 
 ---
 
@@ -27,10 +23,9 @@ By leveraging Snowflake, PySpark, Apache Airflow, and Streamlit, the system enab
 ##  SYSTEM ARCHITECTURE
 
 
-Data Sources (TMDB, IMDB, OTT, Box Office) 
-                ↓ 
-     Data Ingestion (PySpark) 
-                ↓ Snowflake RAW Layer (Bronze) ↓ Silver Layer (Data Cleaning & Transformation) ↓ Gold Layer (Business Transformation & Aggregation) ↓ Fact & Dimension Tables (Star Schema) ↓ Analytics View (VW_MOVIE_ANALYTICS) ↓ Airflow (Pipeline Orchestration) ↓ Streamlit Dashboard (Visualization Layer)
+<p align="center">
+  <img src="snapshots/architecture_diagram.jpeg" width="900"/>
+</p>
 
 ---
 
@@ -199,3 +194,7 @@ Data Sources (TMDB, IMDB, OTT, Box Office)
 - Identify **top-performing genres and studios**  
 - Enable **data-driven business decisions**  
 - Support **content strategy and investments**
+
+## CONCLUSION
+
+The Movie Analytics Platform demonstrates a complete end-to-end data engineering pipeline that transforms raw movie datasets into structured, analytics-ready insights. By integrating multiple data sources and applying Bronze, Silver, and Gold layer architecture, the system ensures efficient data processing, scalability, and reliability. The use of star schema modeling enhances query performance, while the Streamlit dashboard enables interactive visualization of key metrics such as revenue trends, OTT distribution, and genre performance. Overall, this project highlights the significance of data-driven decision-making in improving business strategies and optimizing movie performance in the entertainment industry.
